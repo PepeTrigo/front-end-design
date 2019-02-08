@@ -1,0 +1,38 @@
+body {
+    line-height: 1.2;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: .8;
+    margin-bottom: 2rem;
+
+
+    span {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+}
+
+h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+dt {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+p, li, dt, dd {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}

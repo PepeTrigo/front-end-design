@@ -1,0 +1,26 @@
+{
+  "name": "maquetacion-web",
+  "version": "0.0.1",
+  "description": "Curso HTML, CSS, SASS",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "SASS"
+  ],
+  "author": "Pepe Trigo",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "map-stream": "0.0.6"
+  }
+}

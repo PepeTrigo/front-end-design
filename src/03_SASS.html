@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,900|Roboto:400,900" rel="stylesheet">
+    <link href="_/css/styles.css" rel="stylesheet" />
+    <title>SASS</title>
+</head>
+<body>
+    <h1>
+        SASS<br>
+        <span>Sintactically <b>Awesome</b> Style Sheets</span>
+    </h1>
+    <ul>
+        <li>
+            Super set de CSS compatible con el lenguaje.
+        </li>
+        <li>
+            Dos sintaxis .sass y .scss (Poco habitual ver .sass).
+        </li>
+        <li>
+            Tres implementaciones, Ruby, LibSass (Node) y Dart.
+        </li>
+        <li>
+            Es necesario una tarea de compilación a CSS con Ruby, Grunt, Gulp, Webpack…
+        </li>
+    </ul>
+
+    <h2>Variables</h2>
+    <ul>
+        <li>Sass permite asignar valores de propiedades CSS a variables</li>
+        <li>También se pueden asignar otras variables y operaciones</li>
+    </ul>
+    <pre>
+        <code class="language-scss">
+            $black: #000000;
+            $awesome-color: $black;
+            $grey: lighten( $black, 10% );
+        </code>
+    </pre>
+    <h2>Anidación</h2>
+    <ul>
+        <li>Los selectores se pueden anidar respetando su correspondiente jerarquía en el maracado</li>
+        <li>Pseudo-clases y pseudo-elementos precedidos del símbolo &</li>
+    </ul>
+    <pre>
+        <code class="language-scss">
+            nav {
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+                
+                li { display: inline-block; }
+                
+                a {
+                    display: block;
+                    padding: 1rem 1rem;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }    
+        </code>
+    </pre>
+    <h2>Parciales e imports</h2>
+    <ul>
+        <li>Se puede distribuir las hojas de estilos en distintos archivos</li>
+        <li>El guión bajo que precede al nombre indica que el archivo es un parcial y por tanto no se compila</li>
+        <li>La instrucción @import se declara en el archivo en el que se quiere compilar, no es necesaria la extensión</li>
+    </ul>
+    <pre>
+        <code class="language-scss">
+            // Estructura de archivos
+
+            _settings.scss
+            _tools.scss
+            _generic.scss
+            _elements.scss
+            _objects.scss
+            _components.scss
+            _utilities.scss
+            styles.scss
+
+            // Código en styles.scss
+
+            @import "settings";
+            @import "tools";
+            @import "generic";
+            @import "elements";
+            @import "objects";
+            @import "components";
+            @import "utilities";
+        </code>
+    </pre>
+    <h2>Mixins</h2>
+    <ul>
+        <li>Los mixins son declaraciones de conjuntos de estilos reutilizables</li>
+        <li>Admiten parámetros</li>
+        <li>Sólo se compilan allí donde se usan, la declaración original no genera código</li>
+    </ul>
+    <pre>
+        <code class="language-scss">
+            @mixin clearfix() {
+                &::after {
+                    display: block;
+                    clear: both;
+                    content: "";
+                }
+            }
+
+            .floating-children {
+                @include clearfix;
+            }
+        </code>
+    </pre>
+    <h2>Herencia</h2>
+    <ul>
+        <li>Existe la posibilidad de extender de una clase</li>
+    </ul>
+    <pre>
+        <code class="language-scss">
+            /* This CSS will print because %message-shared is extended. */
+            %message-shared {
+                border: 1px solid #ccc;
+                padding: 10px;
+                color: #333;
+            }
+            
+            // This CSS won't print because %equal-heights is never extended.
+            %equal-heights {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .message {
+                @extend %message-shared;
+            }
+            
+            .success {
+                @extend %message-shared;
+                border-color: green;
+            }
+            
+            .error {
+                @extend %message-shared;
+                border-color: red;
+            }
+            
+            .warning {
+                @extend %message-shared;
+                border-color: yellow;
+            }
+        </code>
+    </pre>
+    <h2>Operadores y funciones</h2>
+    <ul>
+        <li>Sass permite crear funciones con SassSript</li>
+    </ul>
+    <pre>
+        <code class="language-scss">
+            $browser-context: 16;
+
+            @function em($pixels, $context: $browser-context) {
+                @if (unitless($pixels)) {
+                    $pixels: $pixels * 1px;
+                }
+                
+                @if (unitless($context)) {
+                    $context: $context * 1px;
+                }
+                
+                @return $pixels / $context * 1em;
+                }
+            }
+        </code>
+    </pre>
+    <ul>
+        <li>
+            <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html">https://sass-lang.com/documentation/file.SASS_REFERENCE.html</a>
+        </li>
+        <li>
+            <a href="https://robots.thoughtbot.com/controlling-color-with-sass-color-functions">https://robots.thoughtbot.com/controlling-color-with-sass-color-functions</a>
+        </li>
+        <li>
+            <a href="http://thesassway.com/">http://thesassway.com/</a>
+        </li>
+    </ul>
+    <footer>
+        <a href="02_CSS.html">02 CSS</a>
+        <a href="04_OOCSS.html">04 OOCSS</a>
+    </footer>
+    <script src="_/js/prism.js"></script>
+</body>
+</html>

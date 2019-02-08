@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,900|Roboto:400,900" rel="stylesheet">
+    <link href="_/css/styles.css" rel="stylesheet"/>
+    <title>CSS</title>
+</head>
+<body>
+    <h1>CSS<br>
+        <span><b>Cascading</b> Style Sheets</span>
+    </h1>
+    <img class="responsive-image" src="_/images/css.gif" alt="">
+    <h2>Conceptos fundamentales</h2>
+    <h3>Flujo normal del documento</h3>
+    <p>La forma que los elementos se colocan por defecto</p>
+    <dl>
+        <dt>Elementos de bloque</dt>
+        <dd>Ocupan el 100% del ancho del elemento que lo contiene y el 100% del alto de su contenido</dd>
+        <dd>Si va seguido de otro elemento de bloque se coloca debajo del que le precede</dd>
+        <dt>Elementos de línea</dt>
+        <dd>Ocupan el 100% del ancho y alto de su contenido</dd>
+        <dd>Si va seguido de otro elemento de línea o texto, se coloca segido hasta llegar al ancho del contenedor, que
+            pasaía a estar debajo</dd>
+        <dd>No se les puede dar dimension mediante <i>width</i> o <i>height</i></dd>
+    </dl>
+    </ul>
+    <h3>Modelo de caja</h3>
+    <p>Todo elemento del documeto tiene la estructura de una caja rectangular</p>
+    <img class="responsive-image" src="_/images/box-model-standard-small.png" alt="">
+    <p>Si su <i>border-box</i> es <i>content-box</i> (el valor por defecto) la propiedad <i>width</i> define solo el
+        ancho del contenido</p>
+    <p>Si su <i>border-box</i> es <i>border-box</i> la propiedad <i>width</i> define el ancho total incluyendo el
+        contenido, padding y bordes. Lo mismo aplica para el alto</p>
+    <h3>Posicionamiento</h3>
+    <p>Cuando un elemento tiene posición relativa, el espacio que ocuparía en el flujo normal del documento queda
+        reservado, todos los elementos que hay a su alrededor se renderizan como si el elemento posicionado estuviese
+        ocupando su flujo normal, pero si se alteran las propiedades <i>top</i>, <i>right</i>, <i>bottom</i> o <i>left</i>
+        el elemento se desplazará acorde alos valores asignados</p>
+    <p>Cuando se posiciona un elmento absolutamente, el espacio que ocuparía en el flujo normal del documento se
+        colapsa, el elemento se posiciona respecto a su ancestro relativo más cercano y los valores <i>top</i>, <i>right</i>,
+        <i>bottom</i> o <i>left</i> asignados</p>
+    <p>Cuando un elemento tiene posición fija, también sale del flujo normal del documento y su espacio se colapsa,
+        pero se posiciona respecto al viewport y los valores <i>top</i>, <i>right</i>, <i>bottom</i> o <i>left</i>
+        asignados, si se hace scroll sobre el documento, el elemento posicionado se mantiene fijo es su posición</p>
+    <p>Cuando el elemento tien posicionamiento <i>sticky</i> éste se posiciona de acuerdo al flujo normal de la página
+        con un <i>offset relativo a su ancestro más cercano con un mecanismo de scroll</i></p>
+    <h3>z-index</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context</a></li>
+    </ul>
+    <h3>Cascada / Herencia / Especificidad</h3>
+    <img class="responsive-image" src="_/images/!important.jpeg" alt="">
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity</a></li>
+    </ul>
+    <footer>
+        <a href="01_HTML.html">01 HTML</a>
+        <a href="03_SASS.html">03 SASS</a>
+    </footer>
+</body>
+
+</html>
