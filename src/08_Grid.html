@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Roboto:400,900" rel="stylesheet">
+    <link href="_/css/styles.css" rel="stylesheet"/>
+    <title>Grid</title>
+</head>
+<body>
+    <h1>Grid Layout Module</h1>
+    <p>Sistema de retícula para distribuir el espacio y alinear el contenido.</p>
+    <ul>
+        <li>Relación directa entre el contenedor padre y sus descendientes directos.</li>
+        <li>Dos dimensiones, fila y columna</li>
+        <li>Permite adaptar el tamaño del contenido a las dimensiones del contenedor.</li>
+        <li>Permite alterar el orden visual de los elementos.</li>
+    </ul>
+    <h2>Terminología</h2>
+    <dl>
+        <dt>Grid Container: </dt>
+        <dd>El elemento que define el grid.</dd>
+        <dt>Grid Item:</dt>
+        <dd>Descendiente de primer nivel, elemento HTML que sea un descendiente directo del Grid Container.</dd>
+        <dt>Grid Line:</dt>
+        <dd>Línea horizontales (fila o row) o vertical (columna o column) que separa el grid en secciones. Se referencian por número y pueden ser nombradas.</dd>
+        <dt>Grid Cell:</dt>
+        <dd>La intersección entre una fila y una columna.</dd>
+        <dt>Grid Track:</dt>
+        <dd>El espacio que forma dos o más Grid Lines adjacentes. Row Tracks cuando las líneas son horizontales o Row Columns cuando son verticales.</dd>
+        <dt>Grid Area:</dt>
+        <dd>El area rectangular formado por cuatro Grid Lines específicas que pueden abarcar una o más Grid Cells, definen un área dentro del Grid.</dd>
+        <dt>Grid Gap: </dt>
+        <dd>Espacio vacío entre Grid Tracks.</dd>
+    </dl>
+    <ul>
+        <li>Cualquier Grid Item puede ser colocado en cualquier Grid Cell o Grid Area.</li>
+        <li>Se pueden colocar unos elementos encima de otros, por defecto se respeta el orden del código, se pueden reorganizar utilizando la propiedad z-index.</li>
+        <li>La colocación manual no es afectada por el orden del código.</li>
+        <li>Se pueden anidar Grids.</li>
+        <li>Se pueden aplicar condicionalmente.</li>
+        <li>Se pueden usar en media queries.</li>
+        <li>Se pueden añadir, modificar o eliminar sin afectar el HTML.</li>
+        <li>Los descendientes de segundo nivel necesitan declarar su propio Grid Container.</li>
+    </ul>
+    <h3>Comprueba el soporte del navegador</h3>
+    <p>Feature query:</p>
+    <pre>
+    <code class="language-css">
+    @supports (grid-area: auto) {
+
+    }
+    </code></pre>
+    <h3>Define un Grid</h3>
+    <pre><code class="language-css">
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    </code></pre>
+    <h3>Posiciona los elementos sobre las columnas del Grid</h3>
+    <pre>
+    <code class="language-css">
+    .column-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .column-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .column-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    </code></pre>
+    <h3>Posiciona los elementos sobre las filas del Grid</h3>
+    <pre>
+    <code class="language-css">
+    .row-1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .row-2 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .row-3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    </code></pre>
+    <h3>Shorthand</h3>
+    <pre>
+    <code class="language-css">
+    grid-row: grid-column-start / grid-column-end;
+    
+    grid-column: grid-column-start / grid-column-end;
+    
+    grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
+    </code></pre>
+    <h3>Nombrar grid-lines </h3>
+    <pre>
+    <code class="language-css">
+    grid-template-columns: [column-1] [column-2] [column-3];
+    grid-tempalte-rows: [row-1] [row-2] [row-3];
+    </code></pre>
+    <h3>Nombrar grid-areas</h3>
+    <pre>
+    <code class="language-css">
+    grid-template-area: "header header header"
+                        "nav main main"
+                        "footer footer foter":
+
+    .grid-header {
+        grid-area: header;
+    }
+
+    .grid-nav {
+        grid-area: nav;
+    }
+
+    .grid-footer {
+        gird-area: footer;
+    }
+    </code></pre>
+
+    <h3>Valores particulares</h3>
+    <dl>
+        <dt>auto:</dt>
+        <dt>Basado en el alto y ancho de su contenido.</dt>
+        <dt>fr:</dt>
+        <dt>Fracción del espacio disponible.</dt>
+        <dt>span:</dt>
+        <dt></dt>
+        <dt>minmax:</dt>
+        <dt>(auto, 10em)</dt>
+        <dt>repeat</dt>
+        <dt>(3, 1em 2em)</dt>
+    </dl>
+
+    <h3>Alineamiento <i>Box Alignment Module</i></h3>
+
+    <h4>Propiedades aplicables al Grid Container</h4>
+
+    <p>
+        La propiedad <i>justify-items</i> alinea el contenido cada celda en el eje de línea <i>row</i>
+    </p>
+    <pre><code class="language-css">
+    .grid-container {
+        display: grid;
+        justify-items: start | end | center | stretch;
+    }
+    </code></pre>
+    <p>
+        La propiedad <i>align-items</i> alinea el contenido cada celda en el eje de bloque <i>column</i>
+    </p>
+    <pre><code class="language-css">
+    .grid-container {
+        display: grid;
+        align-items: start | end | center | stretch;
+    }
+    </code></pre>
+    <p>
+        La propiedad <i>justify-content</i> alinea el contenido del grid, si hay espacio disponible, en el eje de línea <i>row</i>
+    </p>
+    <pre><code class="language-css">
+    .grid-container {
+        display: grid;
+        justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
+    }
+    </code></pre>
+    
+    <p>
+        La propiedad <i>align-content</i> alinea el contenido del grid, si hay espacio disponible, en el eje de bloque <i>column</i>
+    </p>
+    <pre><code class="language-css">
+    .grid-container {
+        display: grid;
+        align-content: start | end | center | stretch | space-around | space-between | space-evenly;
+    }
+    </code></pre>
+
+    <h4>Alinear grid-items individuales:</h4>
+
+    <p>
+        La propiedad <i>justify-self</i> alinea el elemento en su respectiva celda en el eje de línea <i>row</i>
+    </p>
+    <pre><code class="language-css">
+    .grid-container {
+        display: grid;
+        justify-self: start | end | center | stretch;
+    }
+    </code></pre>
+
+    <p>
+        La propiedad <i>align-self</i> alinea el elemento en su respectiva celda en el eje de línea <i>column</i>
+    </p>
+    <pre><code class="language-css">
+    .grid-container {
+        display: grid;
+        align-self: start | end | center | stretch;
+    }
+    </code></pre>
+
+    <!-- <h3>Auto grid features:</h3>
+        <p>
+            grid-auto-flow:
+        </p>
+    <h3>Implicit grid lines:</h3>
+    <p>
+        grid
+    </p> -->
+
+    <ul>
+        <li>
+            <a href="https://cssgridgarden.com">https://cssgridgarden.com</a>
+        </li>
+        <li>
+            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
+        </li>
+    </ul>
+    <footer>
+        <a href="07_Flexbox.html">07 Flexbox</a>
+        <a href="09_WebComponents.html">09 Web Components</a>
+    </footer>
+    <script src="_/js/prism.js"></script>
+</body>
+</html>
+
+
+
