@@ -33,41 +33,37 @@
         <li>Sass permite asignar valores de propiedades CSS a variables</li>
         <li>También se pueden asignar otras variables y operaciones</li>
     </ul>
-    <pre>
-        <code class="language-scss">
-            $black: #000000;
-            $awesome-color: $black;
-            $grey: lighten( $black, 10% );
-        </code>
-    </pre>
+    <pre><code class="language-scss">
+    $black: #000000;
+    $awesome-color: $black;
+    $grey: lighten( $black, 10% );
+    </code></pre>
     <h2>Anidación</h2>
     <ul>
         <li>Los selectores se pueden anidar respetando su correspondiente jerarquía en el maracado</li>
         <li>Pseudo-clases y pseudo-elementos precedidos del símbolo &</li>
     </ul>
-    <pre>
-        <code class="language-scss">
-            nav {
-                ul {
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                }
-                
-                li { display: inline-block; }
-                
-                a {
-                    display: block;
-                    padding: 1rem 1rem;
-                    text-decoration: none;
+    <pre><code class="language-scss">
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        li { display: inline-block; }
+        
+        a {
+            display: block;
+            padding: 1rem 1rem;
+            text-decoration: none;
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }    
-        </code>
-    </pre>
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    </code></pre>
     <h2>Parciales e imports</h2>
     <ul>
         <li>Se puede distribuir las hojas de estilos en distintos archivos</li>
@@ -75,28 +71,28 @@
         <li>La instrucción @import se declara en el archivo en el que se quiere compilar, no es necesaria la extensión</li>
     </ul>
     <pre>
-        <code class="language-scss">
-            // Estructura de archivos
+    <code class="language-scss">
+        // Estructura de archivos
 
-            _settings.scss
-            _tools.scss
-            _generic.scss
-            _elements.scss
-            _objects.scss
-            _components.scss
-            _utilities.scss
-            styles.scss
+        _settings.scss
+        _tools.scss
+        _generic.scss
+        _elements.scss
+        _objects.scss
+        _components.scss
+        _utilities.scss
+        styles.scss
 
-            // Código en styles.scss
+        // Código en styles.scss
 
-            @import "settings";
-            @import "tools";
-            @import "generic";
-            @import "elements";
-            @import "objects";
-            @import "components";
-            @import "utilities";
-        </code>
+        @import "settings";
+        @import "tools";
+        @import "generic";
+        @import "elements";
+        @import "objects";
+        @import "components";
+        @import "utilities";
+    </code>
     </pre>
     <h2>Mixins</h2>
     <ul>
