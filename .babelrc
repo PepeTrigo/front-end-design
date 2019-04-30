@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    [
+      "prismjs",
+      {
+        "languages": ["markup", "css", "scss", "javascript"],
+        "plugins": ["line-numbers", "normalize-whitespace"],
+        "theme": "okaidia"
+      }
+    ]
+  ]
+}

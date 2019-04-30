@@ -16,6 +16,9 @@
   "author": "Pepe Trigo",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "7.3.4",
+    "babel-loader": "8.0.5",
+    "babel-plugin-prismjs": "^1.0.2",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
@@ -28,5 +31,8 @@
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "prismjs": "^1.16.0"
   }
 }
