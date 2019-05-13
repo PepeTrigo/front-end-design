@@ -76,7 +76,7 @@ module.exports = {
       chunks: ["index"],
       filename: "10_Animaciones.html"
     }),
-    new CopyWebpackPlugin([{ from: "src/_/images", to: "images" }])
+    new CopyWebpackPlugin([{ from: "src/_images", to: "images" }])
   ],
   output: {
     filename: "bundle.js",

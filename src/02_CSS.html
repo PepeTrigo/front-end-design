@@ -13,45 +13,99 @@
         <span><b>Cascading</b> Style Sheets</span>
     </h1>
     <img class="responsive-image" src="/images/css.gif" alt="">
-    <h2>Conceptos fundamentales</h2>
-    <h3>Flujo normal del documento</h3>
-    <p>La forma que los elementos se colocan por defecto</p>
+    <h2>Flujo normal del documento</h2>
+    <p>La forma en la que los elementos se colocan en el documento HTML en función de su propiedad display por defecto.</p>
+    <h2>Formating Context</h2>
+    <p>Define como se comporta el elemento con respecto a los demas elementos de la página, estén fuera o dentro del elemento.</p>
     <dl>
         <dt>Elementos de bloque</dt>
         <dd>Ocupan el 100% del ancho del elemento que lo contiene y el 100% del alto de su contenido</dd>
         <dd>Si va seguido de otro elemento de bloque se coloca debajo del que le precede</dd>
+        <dd>
+            <figure>
+                <div class="demo-block">
+                    <div class="item">Block 1</div><div class="item">Block 2</div><div class="item">Block 3</div>
+                </div>
+            </figure>
+        </dd>
         <dt>Elementos de línea</dt>
         <dd>Ocupan el 100% del ancho y alto de su contenido</dd>
         <dd>Si va seguido de otro elemento de línea o texto, se coloca segido hasta llegar al ancho del contenedor, que
             pasaía a estar debajo</dd>
         <dd>No se les puede dar dimension mediante <i>width</i> o <i>height</i></dd>
+        <dd>
+            <figure>
+                <div class="demo-block">
+                    <span class="item">Inline 1</span><span class="item">Inline 2</span><span class="item">Inline 3</span>
+                </div>
+            </figure>
+        </dd>
     </dl>
     </ul>
-    <h3>Modelo de caja</h3>
+    <h2>Modelo de caja</h2>
     <p>Todo elemento del documeto tiene la estructura de una caja rectangular</p>
     <img class="responsive-image" src="/images/box-model-standard-small.png" alt="">
-    <p>Si su <i>border-box</i> es <i>content-box</i> (el valor por defecto) la propiedad <i>width</i> define solo el
+    <p>Si su propiedad <i>box-sizing</i> tiene el valor <i>content-box</i> (el valor por defecto) la propiedad <i>width</i> define solo el
         ancho del contenido</p>
-    <p>Si su <i>border-box</i> es <i>border-box</i> la propiedad <i>width</i> define el ancho total incluyendo el
+    <figure>
+        <div class="demo-block demo-block--content-box">
+            <div class="demo-block__item">box-sizing: content-box</div>
+        </div>
+    </figure>
+    <p>Si su propiedad <i>box-sizing</i> tiene el valor <i>border-box</i> la propiedad <i>width</i> define el ancho total incluyendo el
         contenido, padding y bordes. Lo mismo aplica para el alto</p>
-    <h3>Posicionamiento</h3>
+        <figure>
+            <div class="demo-block demo-block--border-box">
+                <div class="demo-block__item">box-sizing: border-box</div>
+            </div>
+        </figure>
+    <h2>Posicionamiento</h2>
     <p>Cuando un elemento tiene posición relativa, el espacio que ocuparía en el flujo normal del documento queda
         reservado, todos los elementos que hay a su alrededor se renderizan como si el elemento posicionado estuviese
         ocupando su flujo normal, pero si se alteran las propiedades <i>top</i>, <i>right</i>, <i>bottom</i> o <i>left</i>
         el elemento se desplazará acorde alos valores asignados</p>
+        <figure>
+            <div class="demo-block">
+                <div class="demo-block__item item item--relative">position: relative</div>
+            </div>
+        </figure>
     <p>Cuando se posiciona un elmento absolutamente, el espacio que ocuparía en el flujo normal del documento se
         colapsa, el elemento se posiciona respecto a su ancestro relativo más cercano y los valores <i>top</i>, <i>right</i>,
         <i>bottom</i> o <i>left</i> asignados</p>
+        <figure>
+            <div class="demo-block demo-block--relative">
+                <div class="demo-block__item item item--absolute">position: absolute</div>
+            </div>
+        </figure>
     <p>Cuando un elemento tiene posición fija, también sale del flujo normal del documento y su espacio se colapsa,
         pero se posiciona respecto al viewport y los valores <i>top</i>, <i>right</i>, <i>bottom</i> o <i>left</i>
         asignados, si se hace scroll sobre el documento, el elemento posicionado se mantiene fijo es su posición</p>
-    <p>Cuando el elemento tien posicionamiento <i>sticky</i> éste se posiciona de acuerdo al flujo normal de la página
+        <figure>
+            <div class="demo-block">
+                <div class="demo-block__item item item--fixed">position: fixed</div>
+            </div>
+        </figure>
+    <p>Cuando el elemento tiene posicionamiento <i>sticky</i> éste se posiciona de acuerdo al flujo normal de la página
         con un <i>offset relativo a su ancestro más cercano con un mecanismo de scroll</i></p>
-    <h3>z-index</h3>
+        <figure>
+            <div class="demo-block demo-block--sticky">
+                <div class="demo-block__item item item--sticky">position: sticky</div>
+                <div class="demo-block__item item">position: static</div>
+                <div class="demo-block__item item">position: static</div>
+                <div class="demo-block__item item">position: static</div>
+                <div class="demo-block__item item">position: static</div>
+            </div>
+        </figure>
+    <h2>z-index y el contexto de apilado "Stacking Context"</h2>
+    <p>Existen circunstancias en las que un elemento genera un nuevo contexto de apilado "Stacking context", donde los valores de la propiedad z-index de los elementos contenidos solo aplican en el susodicho contexto.</p>
     <ul>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context</a></li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">
+                https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+            </a>
+        </li>
     </ul>
-    <h3>Cascada / Herencia / Especificidad</h3>
+    <h2>Cascada / Herencia / Especificidad</h2>
     <img class="responsive-image" src="/images/!important.jpeg" alt="">
     <ul>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity</a></li>

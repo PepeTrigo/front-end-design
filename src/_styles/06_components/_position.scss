@@ -1,0 +1,50 @@
+.demo-block {
+  border: 3px solid black;
+  padding: 1rem;
+
+  &--content-box {
+    box-sizing: content-box;
+    width: 100%;
+  }
+
+  &--border-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  &--sticky {
+    overflow: scroll;
+    max-height: 6rem;
+  }
+}
+
+.item {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 0.5rem;
+
+  &--relative {
+    position: relative;
+    bottom: -1rem;
+    right: -1rem;
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+  }
+}

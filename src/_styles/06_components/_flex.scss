@@ -1,0 +1,61 @@
+.sticky-demo {
+  background-color: #fff;
+  margin: 0;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.flex-container {
+  display: flex;
+  border: solid 4px #000;
+}
+
+.flex-item {
+  color: #fff;
+  font-size: 1.2em;
+  padding: 1em;
+  text-align: center;
+
+  &--01 {
+    background-color: #a62e5c;
+  }
+
+  &--02 {
+    background-color: #9bc850;
+    // order: 1;
+    /*order: -1;*/
+  }
+
+  &--03 {
+    background-color: #675ba7;
+  }
+
+  &--04 {
+    background-color: #2a9fbc;
+    order: 0;
+    /*order: 1;*/
+    /*order: -1;*/
+  }
+
+  &--05 {
+    background-color: #f15b2a;
+  }
+
+  &--06 {
+    background-color: #9bc850;
+  }
+
+  &--07 {
+    background-color: #a62e5c;
+  }
+
+  &--08 {
+    background-color: #f15b2a;
+  }
+
+  &--strong {
+    display: block;
+    font-size: 130%;
+  }
+}

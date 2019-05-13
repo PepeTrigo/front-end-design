@@ -1,4 +1,4 @@
-import "./_/sass/styles.scss";
+import "./_styles/styles.scss";
 import Prism from "prismjs";
 
 Prism.highlightAll();
