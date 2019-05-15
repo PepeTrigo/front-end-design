@@ -41,40 +41,34 @@ module.exports = {
       filename: "04_OOCSS.html"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/05_Fonts.html",
+      template: "./src/05_RWD.html",
       inject: true,
       chunks: ["index"],
-      filename: "05_Fonts.html"
+      filename: "05_RWD.html"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/06_RWD.html",
+      template: "./src/06_Flexbox.html",
       inject: true,
       chunks: ["index"],
-      filename: "06_RWD.html"
+      filename: "06_Flexbox.html"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/07_Flexbox.html",
+      template: "./src/07_Grid.html",
       inject: true,
       chunks: ["index"],
-      filename: "07_Flexbox.html"
+      filename: "07_Grid.html"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/08_Grid.html",
+      template: "./src/08_WebComponents.html",
       inject: true,
       chunks: ["index"],
-      filename: "08_Grid.html"
+      filename: "08_WebComponents.html"
     }),
     new HtmlWebpackPlugin({
-      template: "./src/09_WebComponents.html",
+      template: "./src/09_Animaciones.html",
       inject: true,
       chunks: ["index"],
-      filename: "09_WebComponents.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/10_Animaciones.html",
-      inject: true,
-      chunks: ["index"],
-      filename: "10_Animaciones.html"
+      filename: "09_Animaciones.html"
     }),
     new CopyWebpackPlugin([{ from: "src/_images", to: "images" }])
   ],

@@ -1,5 +1,6 @@
 import "./_styles/styles.scss";
 import Prism from "prismjs";
+import "./_components/fed-nav-panel";
 
 Prism.highlightAll();
 

@@ -11,66 +11,69 @@
     <title>Convenciones y arquitectura CSS</title>
   </head>
   <body>
-    <h1>Convenciones y arquitectura</h1>
-    <img class="responsive-image" src="images/css-evolution.jpg" alt="" />
-    <h2>OOCSS</h2>
-    <p>
-      Object Oriented CSS - Patrón que se repite visualmente, puede ser
-      abstraido a un componente y ser reutilizado
-    </p>
-    <ul>
-      <li>Separación entre estructura y presentación</li>
-      <li>Separación entre contenido y contenedor</li>
-    </ul>
-    <ul>
-      <li>
-        <a
-          href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/"
-          >http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/</a
-        >
-      </li>
-      <li>
-        <a href="https://getbootstrap.com/docs/4.2/components/alerts/"
-          >https://getbootstrap.com/docs/4.2/components/alerts/</a
-        >
-      </li>
-    </ul>
-    <h2>SMACSS</h2>
-    <p>
-      Scalable and Modular Architecture for CSS - Más una guía de estilo que un
-      framework, define una serie de convenciones para el nombrado de clases y
-      la organización de los archivos de CSS
-    </p>
-    <dl>
-      <dt>Base:</dt>
-      <dd>Estilos por defecto y transversales</dd>
-      <dt>Layout:</dt>
-      <dd>
-        Secciones de un site como por ejemple el Header, las clases llevan el
-        prefijo l- para identificarlos
-      </dd>
-      <dt>Modules</dt>
-      <dd>
-        Componentes reutilizables incluidos dentro de elementos de layout u
-        otros modulos
-      </dd>
-      <dt>State</dt>
-      <dd>
-        Estilos para cambios de estado causados principalmente por interacciones
-        con el usuario, las clases se nombran con el prefijo is- seguido del
-        estado
-      </dd>
-      <dt>Theme</dt>
-      <dd>Estilos que forman el aspecto visual</dd>
-    </dl>
-    <a href="https://smacss.com">https://smacss.com</a>
-    <h2>BEM</h2>
-    <p>
-      Block Element Modifier es un enfoque basado en componentes. La idea es
-      dividir la interfaz en bloques independientes que se puedan combinar y
-      reutilizar
-    </p>
-    <pre>
+    <header>
+      <h1>Convenciones y arquitectura</h1>
+      <img class="responsive-image" src="images/css-evolution.jpg" alt="" />
+    </header>
+    <main>
+      <h2>OOCSS</h2>
+      <p>
+        Object Oriented CSS - Patrón que se repite visualmente, puede ser
+        abstraido a un componente y ser reutilizado
+      </p>
+      <ul>
+        <li>Separación entre estructura y presentación</li>
+        <li>Separación entre contenido y contenedor</li>
+      </ul>
+      <ul>
+        <li>
+          <a
+            href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/"
+            >http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/</a
+          >
+        </li>
+        <li>
+          <a href="https://getbootstrap.com/docs/4.2/components/alerts/"
+            >https://getbootstrap.com/docs/4.2/components/alerts/</a
+          >
+        </li>
+      </ul>
+      <h2>SMACSS</h2>
+      <p>
+        Scalable and Modular Architecture for CSS - Más una guía de estilo que
+        un framework, define una serie de convenciones para el nombrado de
+        clases y la organización de los archivos de CSS
+      </p>
+      <dl>
+        <dt>Base:</dt>
+        <dd>Estilos por defecto y transversales</dd>
+        <dt>Layout:</dt>
+        <dd>
+          Secciones de un site como por ejemple el Header, las clases llevan el
+          prefijo l- para identificarlos
+        </dd>
+        <dt>Modules</dt>
+        <dd>
+          Componentes reutilizables incluidos dentro de elementos de layout u
+          otros modulos
+        </dd>
+        <dt>State</dt>
+        <dd>
+          Estilos para cambios de estado causados principalmente por
+          interacciones con el usuario, las clases se nombran con el prefijo is-
+          seguido del estado
+        </dd>
+        <dt>Theme</dt>
+        <dd>Estilos que forman el aspecto visual</dd>
+      </dl>
+      <a href="https://smacss.com">https://smacss.com</a>
+      <h2>BEM</h2>
+      <p>
+        Block Element Modifier es un enfoque basado en componentes. La idea es
+        dividir la interfaz en bloques independientes que se puedan combinar y
+        reutilizar
+      </p>
+      <pre>
         <code class="language-html">
             &lt;ul class="nav-menu"&gt;
                 &lt;li class="nav-menu__item" &gt;
@@ -85,28 +88,28 @@
             &lt;/ul&gt; 
         </code>
     </pre>
-    <dl>
-      <dt>Block:</dt>
-      <dd>
-        <p>
-          Componente individual que puede ser reutilizado, tiene sentido por sí
-          mismo
-        </p>
-        <pre>
+      <dl>
+        <dt>Block:</dt>
+        <dd>
+          <p>
+            Componente individual que puede ser reutilizado, tiene sentido por
+            sí mismo
+          </p>
+          <pre>
                 <code class="language-scss">
                     .nav-menu {
                         /* Main nav styles */
                     }
                 </code>
             </pre>
-      </dd>
-      <dt>Element</dt>
-      <dd>
-        <p>
-          Parte de un bloque que no tiene sentido por sí mismo y está
-          semánticamente atado al bloque
-        </p>
-        <pre>
+        </dd>
+        <dt>Element</dt>
+        <dd>
+          <p>
+            Parte de un bloque que no tiene sentido por sí mismo y está
+            semánticamente atado al bloque
+          </p>
+          <pre>
                 <code class="language-scss">
                     .nav-menu {
                         /* Main nav styles */
@@ -117,14 +120,14 @@
                     }
                 </code>
             </pre>
-      </dd>
-      <dt>Modifier</dt>
-      <dd>
-        <p>
-          Representa un estado de un bloque o un elemento, se usa para
-          representar apariencia o comportamiento
-        </p>
-        <pre>
+        </dd>
+        <dt>Modifier</dt>
+        <dd>
+          <p>
+            Representa un estado de un bloque o un elemento, se usa para
+            representar apariencia o comportamiento
+          </p>
+          <pre>
                 <code class="language-scss">
                     /* Hyphenated BEM */
 
@@ -139,14 +142,14 @@
                     }
                 </code>
             </pre>
-      </dd>
-      <dt>Mix</dt>
-      <dd>
-        <p>
-          Permite combinar Bloques en un nodo para reutilizar estilos y crear
-          nuevos componentes
-        </p>
-        <pre>
+        </dd>
+        <dt>Mix</dt>
+        <dd>
+          <p>
+            Permite combinar Bloques en un nodo para reutilizar estilos y crear
+            nuevos componentes
+          </p>
+          <pre>
                 <code class="language-scss">
 
                     .nav-menu .header__nav-menu {
@@ -155,77 +158,96 @@
 
                 </code>
             </pre>
-      </dd>
-    </dl>
-    <ul>
-      <li>
-        <a href="http://getbem.com/introduction/"
-          >http://getbem.com/introduction/</a
-        >
-      </li>
-      <li>
-        <a href="https://en.bem.info/methodology/css/"
-          >https://en.bem.info/methodology/css/</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/"
-          >https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</a
-        >
-      </li>
-    </ul>
-    <h2>ITCSS</h2>
-    <p>
-      Inverted Triangle CSS es una forma de organizar los archivos CSS para
-      tratar con aspectos específicos de CSS como espacio de nombres global, la
-      cascada y la especifidad
-    </p>
-    <img
-      class="responsive-image p-4"
-      src="images/itcss-key-metrics.svg"
-      alt=""
-    />
-    <img class="responsive-image p-4" src="images/itcss-layers2.svg" alt="" />
+        </dd>
+      </dl>
+      <ul>
+        <li>
+          <a href="http://getbem.com/introduction/"
+            >http://getbem.com/introduction/</a
+          >
+        </li>
+        <li>
+          <a href="https://en.bem.info/methodology/css/"
+            >https://en.bem.info/methodology/css/</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/"
+            >https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</a
+          >
+        </li>
+      </ul>
+      <h2>ITCSS</h2>
+      <p>
+        Inverted Triangle CSS es una forma de organizar los archivos CSS para
+        tratar con aspectos específicos de CSS como espacio de nombres global,
+        la cascada y la especifidad
+      </p>
+      <img
+        class="responsive-image p-4"
+        src="images/itcss-key-metrics.svg"
+        alt=""
+      />
+      <img class="responsive-image p-4" src="images/itcss-layers2.svg" alt="" />
 
-    <dl>
-      <dt>Settings:</dt>
-      <dd>Definiciones de fuentes, colores, tamaños, etc...</dd>
-      <dt>Tools</dt>
-      <dd>Mixins y funciones utilizados globalmente</dd>
-      <dt>Generic</dt>
-      <dd>
-        Resets, normalize, definiciones de box-sizing... Es la primera capa que
-        genera CSS
-      </dd>
-      <dt>Elements</dt>
-      <dd>Estilos aplicados a los elementos HTML</dd>
-      <dt>Objects</dt>
-      <dd>
-        Selectores basados en clases que definen patrones, por ejemplo el Media
-        Object
-      </dd>
-      <dt>Components</dt>
-      <dd>
-        Elementos específicos de la interfaz de usuario que habitualmente
-        extienden objetos
-      </dd>
-      <dt>Utilities</dt>
-      <dd>
-        Clases de ayuda con la habilidad de sobreescribir cualquier declaración
-        anterior en la piramide
-      </dd>
-    </dl>
-    <ul>
-      <li>
-        <a href="https://github.com/inuitcss/inuitcss"
-          >https://github.com/inuitcss/inuitcss</a
-        >
-      </li>
-    </ul>
+      <dl>
+        <dt>Settings:</dt>
+        <dd>Definiciones de fuentes, colores, tamaños, etc...</dd>
+        <dt>Tools</dt>
+        <dd>Mixins y funciones utilizados globalmente</dd>
+        <dt>Generic</dt>
+        <dd>
+          Resets, normalize, definiciones de box-sizing... Es la primera capa
+          que genera CSS
+        </dd>
+        <dt>Elements</dt>
+        <dd>Estilos aplicados a los elementos HTML</dd>
+        <dt>Objects</dt>
+        <dd>
+          Selectores basados en clases que definen patrones, por ejemplo el
+          Media Object
+        </dd>
+        <dt>Components</dt>
+        <dd>
+          Elementos específicos de la interfaz de usuario que habitualmente
+          extienden objetos
+        </dd>
+        <dt>Utilities</dt>
+        <dd>
+          Clases de ayuda con la habilidad de sobreescribir cualquier
+          declaración anterior en la piramide
+        </dd>
+      </dl>
+      <ul>
+        <li>
+          <a href="https://github.com/inuitcss/inuitcss"
+            >https://github.com/inuitcss/inuitcss</a
+          >
+        </li>
+      </ul>
+    </main>
     <footer>
-      <a href="03_SASS.html">03 SASS</a>
-      <a href="05_Fonts.html">05 FONTS</a>
+      <nav class="main-nav">
+        <fed-nav-panel>
+          <ul>
+            <li class="nav-item"><a href="index.html">Index</a></li>
+            <li class="nav-item"><a href="01_HTML.html">01 HTML</a></li>
+            <li class="nav-item"><a href="02_CSS.html">02 CSS</a></li>
+            <li class="nav-item"><a href="03_SASS.html">03 SASS</a></li>
+            <li class="nav-item"><a href="04_OOCSS.html">04 OOCSS</a></li>
+            <li class="nav-item"><a href="05_RWD.html">05 RWD</a></li>
+            <li class="nav-item"><a href="06_Flexbox.html">06 Flexbox</a></li>
+            <li class="nav-item"><a href="07_Grid.html">07 Grid</a></li>
+            <li class="nav-item">
+              <a href="08_WebComponents.html">08 Web Components</a>
+            </li>
+            <li class="nav-item">
+              <a href="09_Animaciones.html">09 Animaciones</a>
+            </li>
+          </ul>
+        </fed-nav-panel>
+      </nav>
     </footer>
     <script src="_/js/prism.js"></script>
   </body>

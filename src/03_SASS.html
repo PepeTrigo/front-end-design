@@ -11,47 +11,50 @@
     <title>SASS</title>
   </head>
   <body>
-    <h1>
-      SASS<br />
-      <span>Sintactically <b>Awesome</b> Style Sheets</span>
-    </h1>
-    <ul>
-      <li>
-        Super set de CSS compatible con el lenguaje.
-      </li>
-      <li>
-        Dos sintaxis .sass y .scss (Poco habitual ver .sass).
-      </li>
-      <li>
-        Tres implementaciones, Ruby, LibSass (Node) y Dart.
-      </li>
-      <li>
-        Es necesario una tarea de compilación a CSS con Ruby, Grunt, Gulp,
-        Webpack…
-      </li>
-    </ul>
+    <header>
+      <h1>
+        SASS<br />
+        <span>Sintactically <b>Awesome</b> Style Sheets</span>
+      </h1>
+    </header>
+    <main>
+      <ul>
+        <li>
+          Super set de CSS compatible con el lenguaje.
+        </li>
+        <li>
+          Dos sintaxis .sass y .scss (Poco habitual ver .sass).
+        </li>
+        <li>
+          Tres implementaciones, Ruby, LibSass (Node) y Dart.
+        </li>
+        <li>
+          Es necesario una tarea de compilación a CSS con Ruby, Grunt, Gulp,
+          Webpack…
+        </li>
+      </ul>
 
-    <h2>Variables</h2>
-    <ul>
-      <li>Sass permite asignar valores de propiedades CSS a variables</li>
-      <li>También se pueden asignar otras variables y operaciones</li>
-    </ul>
-    <pre><code class="language-scss">
+      <h2>Variables</h2>
+      <ul>
+        <li>Sass permite asignar valores de propiedades CSS a variables</li>
+        <li>También se pueden asignar otras variables y operaciones</li>
+      </ul>
+      <pre><code class="language-scss">
     $black: #000000;
     $awesome-color: $black;
     $grey: lighten( $black, 10% );
 
     $brand-color: blue !default;
     </code></pre>
-    <h2>Anidación</h2>
-    <ul>
-      <li>
-        Los selectores se pueden anidar respetando su correspondiente jerarquía
-        en el maracado
-      </li>
-      <li>Pseudo-clases y pseudo-elementos precedidos del símbolo &</li>
-    </ul>
-    <pre><code class="language-scss">
+      <h2>Anidación</h2>
+      <ul>
+        <li>
+          Los selectores se pueden anidar respetando su correspondiente
+          jerarquía en el maracado
+        </li>
+        <li>Pseudo-clases y pseudo-elementos precedidos del símbolo &</li>
+      </ul>
+      <pre><code class="language-scss">
     nav {
         ul {
             margin: 0;
@@ -72,19 +75,19 @@
         }
     }
     </code></pre>
-    <h2>Parciales e imports</h2>
-    <ul>
-      <li>Se puede distribuir las hojas de estilos en distintos archivos</li>
-      <li>
-        El guión bajo que precede al nombre indica que el archivo es un parcial
-        y por tanto no se compila
-      </li>
-      <li>
-        La instrucción @import se declara en el archivo en el que se quiere
-        compilar, no es necesaria la extensión
-      </li>
-    </ul>
-    <pre>
+      <h2>Parciales e imports</h2>
+      <ul>
+        <li>Se puede distribuir las hojas de estilos en distintos archivos</li>
+        <li>
+          El guión bajo que precede al nombre indica que el archivo es un
+          parcial y por tanto no se compila
+        </li>
+        <li>
+          La instrucción @import se declara en el archivo en el que se quiere
+          compilar, no es necesaria la extensión
+        </li>
+      </ul>
+      <pre>
     <code class="language-scss">
         // Estructura de archivos
 
@@ -108,18 +111,18 @@
         @import "utilities";
     </code>
     </pre>
-    <h2>Mixins</h2>
-    <ul>
-      <li>
-        Los mixins son declaraciones de conjuntos de estilos reutilizables
-      </li>
-      <li>Admiten parámetros</li>
-      <li>
-        Sólo se compilan allí donde se usan, la declaración original no genera
-        código
-      </li>
-    </ul>
-    <pre>
+      <h2>Mixins</h2>
+      <ul>
+        <li>
+          Los mixins son declaraciones de conjuntos de estilos reutilizables
+        </li>
+        <li>Admiten parámetros</li>
+        <li>
+          Sólo se compilan allí donde se usan, la declaración original no genera
+          código
+        </li>
+      </ul>
+      <pre>
       <code class="language-scss line-numbers">
           @mixin clearfix() {
               &::after {
@@ -134,11 +137,11 @@
           }
       </code>
     </pre>
-    <h2>Herencia</h2>
-    <ul>
-      <li>Existe la posibilidad de extender de una clase</li>
-    </ul>
-    <pre>
+      <h2>Herencia</h2>
+      <ul>
+        <li>Existe la posibilidad de extender de una clase</li>
+      </ul>
+      <pre>
         <code class="language-scss">
             /* This CSS will print because %message-shared is extended. */
             %message-shared {
@@ -173,11 +176,11 @@
             }
         </code>
     </pre>
-    <h2>Operadores y funciones</h2>
-    <ul>
-      <li>Sass permite crear funciones con SassSript</li>
-    </ul>
-    <pre>
+      <h2>Operadores y funciones</h2>
+      <ul>
+        <li>Sass permite crear funciones con SassSript</li>
+      </ul>
+      <pre>
         <code class="language-scss">
             $browser-context: 16;
 
@@ -195,25 +198,44 @@
             }
         </code>
     </pre>
-    <ul>
-      <li>
-        <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html"
-          >https://sass-lang.com/documentation/file.SASS_REFERENCE.html</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://robots.thoughtbot.com/controlling-color-with-sass-color-functions"
-          >https://robots.thoughtbot.com/controlling-color-with-sass-color-functions</a
-        >
-      </li>
-      <li>
-        <a href="http://thesassway.com/">http://thesassway.com/</a>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html"
+            >https://sass-lang.com/documentation/file.SASS_REFERENCE.html</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://robots.thoughtbot.com/controlling-color-with-sass-color-functions"
+            >https://robots.thoughtbot.com/controlling-color-with-sass-color-functions</a
+          >
+        </li>
+        <li>
+          <a href="http://thesassway.com/">http://thesassway.com/</a>
+        </li>
+      </ul>
+    </main>
     <footer>
-      <a href="02_CSS.html">02 CSS</a>
-      <a href="04_OOCSS.html">04 OOCSS</a>
+      <nav class="main-nav">
+        <fed-nav-panel>
+          <ul>
+            <li class="nav-item"><a href="index.html">Index</a></li>
+            <li class="nav-item"><a href="01_HTML.html">01 HTML</a></li>
+            <li class="nav-item"><a href="02_CSS.html">02 CSS</a></li>
+            <li class="nav-item"><a href="03_SASS.html">03 SASS</a></li>
+            <li class="nav-item"><a href="04_OOCSS.html">04 OOCSS</a></li>
+            <li class="nav-item"><a href="05_RWD.html">05 RWD</a></li>
+            <li class="nav-item"><a href="06_Flexbox.html">06 Flexbox</a></li>
+            <li class="nav-item"><a href="07_Grid.html">07 Grid</a></li>
+            <li class="nav-item">
+              <a href="08_WebComponents.html">08 Web Components</a>
+            </li>
+            <li class="nav-item">
+              <a href="09_Animaciones.html">09 Animaciones</a>
+            </li>
+          </ul>
+        </fed-nav-panel>
+      </nav>
     </footer>
   </body>
 </html>

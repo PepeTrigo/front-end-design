@@ -15,408 +15,418 @@
     <title>HTML</title>
   </head>
   <body>
-    <h1>
-      HTML 5<br />
-      <span>Hypertext <b>Markup</b> Language </span>
-    </h1>
-    <ul>
-      <li>Soporte sobre el que se sostiene una aplicación web.</li>
-      <li>Define la estructura y da sentido a la información que contiene.</li>
-      <li>La única tecnología front-end que no depende de las otras.</li>
-    </ul>
-    <h2>Semántica</h2>
-    <blockquote>
-      <p>
-        Las etiquetas HTML están dotadas de semántica, proporcionan significado
-        a navegadores, motores de búsqueda y tecnologías asistenciales...
-      </p>
-      <cite>- W3C</cite>
-    </blockquote>
-    <blockquote>
-      <p>
-        Además de a otros desarrolladores entre los cuales es bastante probable
-        que se encuentre tu yo del futuro.
-      </p>
-      <cite>- Pepe Trigo </cite>
-    </blockquote>
+    <header>
+      <h1>
+        HTML 5<br />
+        <span>Hypertext <b>Markup</b> Language </span>
+      </h1>
+    </header>
+    <main>
+      <ul>
+        <li>Soporte sobre el que se sostiene una aplicación web.</li>
+        <li>
+          Define la estructura y da sentido a la información que contiene.
+        </li>
+        <li>La única tecnología front-end que no depende de las otras.</li>
+      </ul>
+      <h2>Semántica</h2>
+      <blockquote>
+        <p>
+          Las etiquetas HTML están dotadas de semántica, proporcionan
+          significado a navegadores, motores de búsqueda y tecnologías
+          asistenciales...
+        </p>
+        <cite>- W3C</cite>
+      </blockquote>
+      <blockquote>
+        <p>
+          Además de a otros desarrolladores entre los cuales es bastante
+          probable que se encuentre tu yo del futuro.
+        </p>
+        <cite>- Pepe Trigo </cite>
+      </blockquote>
 
-    <h3>
-      Elementos HTML
-    </h3>
+      <h3>
+        Elementos HTML
+      </h3>
 
-    <dl>
-      <dt>
-        Documento
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;html&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Metadatos
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;head&gt;</li>
-          <li>&lt;title&gt;</li>
-          <li>&lt;base&gt;</li>
-          <li>&lt;link&gt;</li>
-          <li>&lt;meta&gt;</li>
-          <li>&lt;style&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Secciones
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;body&gt;</li>
-          <li>&lt;header&gt;</li>
-          <li>&lt;article&gt;</li>
-          <li>&lt;section&gt;</li>
-          <li>&lt;nav&gt;</li>
-          <li>&lt;aside&gt;</li>
-          <li>&lt;footer&gt;</li>
-          <li>&lt;h1&gt;</li>
-          <li>&lt;h2&gt;</li>
-          <li>&lt;h3&gt;</li>
-          <li>&lt;h4&gt;</li>
-          <li>&lt;h5&gt;</li>
-          <li>&lt;h6&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Agrupadores de contenido
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;p&gt;</li>
-          <li>&lt;address&gt;</li>
-          <li>&lt;hr&gt;</li>
-          <li>&lt;pre&gt;</li>
-          <li>&lt;blockquote&gt;</li>
-          <li>&lt;ol&gt;</li>
-          <li>&lt;ul&gt;</li>
-          <li>&lt;li&gt;</li>
-          <li>&lt;dl&gt;</li>
-          <li>&lt;dt&gt;</li>
-          <li>&lt;dd&gt;</li>
-          <li>&lt;figure&gt;</li>
-          <li>&lt;figcaption&gt;</li>
-          <li>&lt;main&gt;</li>
-          <li>&lt;div&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Semántica a nivel de texto
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;a&gt;</li>
-          <li>&lt;em&gt;</li>
-          <li>&lt;strong&gt;</li>
-          <li>&lt;small&gt;</li>
-          <li>&lt;s&gt;</li>
-          <li>&lt;cite&gt;</li>
-          <li>&lt;q&gt;</li>
-          <li>&lt;dfn&gt;</li>
-          <li>&lt;abbr&gt;</li>
-          <li>&lt;ruby&gt;</li>
-          <li>&lt;rb&gt;</li>
-          <li>&lt;rt&gt;</li>
-          <li>&lt;rtc&gt;</li>
-          <li>&lt;rp&gt;</li>
-          <li>&lt;data&gt;</li>
-          <li>&lt;time&gt;</li>
-          <li>&lt;li&gt;</li>
-          <li>&lt;var&gt;</li>
-          <li>&lt;samp&gt;</li>
-          <li>&lt;kbd&gt;</li>
-          <li>&lt;sub&gt;</li>
-          <li>&lt;sup&gt;</li>
-          <li>&lt;i&gt;</li>
-          <li>&lt;b&gt;</li>
-          <li>&lt;u&gt;</li>
-          <li>&lt;mark&gt;</li>
-          <li>&lt;bdi&gt;</li>
-          <li>&lt;bdo&gt;</li>
-          <li>&lt;span&gt;</li>
-          <li>&lt;br&gt;</li>
-          <li>&lt;wbr&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Edición
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;ins&gt;</li>
-          <li>&lt;del&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Contenido incorporado
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;picture&gt;</li>
-          <li>&lt;source&gt;</li>
-          <li>&lt;img&gt;</li>
-          <li>&lt;iframe&gt;</li>
-          <li>&lt;embed&gt;</li>
-          <li>&lt;object&gt;</li>
-          <li>&lt;param&gt;</li>
-          <li>&lt;video&gt;</li>
-          <li>&lt;audio&gt;</li>
-          <li>&lt;track&gt;</li>
-          <li>&lt;map&gt;</li>
-          <li>&lt;area&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Enlaces
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;a&gt;</li>
-          <li>&lt;area&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Datos tabulares
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;table&gt;</li>
-          <li>&lt;caption&gt;</li>
-          <li>&lt;colgroup&gt;</li>
-          <li>&lt;col&gt;</li>
-          <li>&lt;tbody&gt;</li>
-          <li>&lt;thead&gt;</li>
-          <li>&lt;tfoot&gt;</li>
-          <li>&lt;tr&gt;</li>
-          <li>&lt;td&gt;</li>
-          <li>&lt;th&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Formularios
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;form&gt;</li>
-          <li>&lt;label&gt;</li>
-          <li>&lt;input&gt;</li>
-          <li>&lt;button&gt;</li>
-          <li>&lt;select&gt;</li>
-          <li>&lt;datalist&gt;</li>
-          <li>&lt;optgroup&gt;</li>
-          <li>&lt;option&gt;</li>
-          <li>&lt;textarea&gt;</li>
-          <li>&lt;output&gt;</li>
-          <li>&lt;progress&gt;</li>
-          <li>&lt;meter&gt;</li>
-          <li>&lt;fieldset&gt;</li>
-          <li>&lt;legend&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Elementos interactivos
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;details&gt;</li>
-          <li>&lt;summary&gt;</li>
-          <li>&lt;dialog&gt;</li>
-        </ul>
-      </dd>
-      <dt>
-        Scripting
-      </dt>
-      <dd>
-        <ul class="code-block">
-          <li>&lt;script&gt;</li>
-          <li>&lt;noscript&gt;</li>
-          <li>&lt;template&gt;</li>
-          <li>&lt;canvas&gt;</li>
-        </ul>
-      </dd>
-    </dl>
-    <ul>
-      <li>
-        <a
-          href="https://www.w3.org/TR/html5/semantics.html#semantics"
-          target="_blank"
-          >https://www.w3.org/TR/html5/semantics.html#semantics</a
-        >
-      </li>
-    </ul>
-    <h3>
-      Modelos de contenido
-    </h3>
-    <p>
-      Cada elemento HTML tiene un modelo de contenido "Content Model", que es el
-      tipo de contenido que la etiqueta admite.
-    </p>
-    <dl>
-      <dt>
-        Metadatos:
-      </dt>
-      <dd>
-        Contenido que prepara la presentación o comportamiento del resto de
-        contenido y la relación con otros documentos.
-      </dd>
-      <dt>
-        Flujo:
-      </dt>
-      <dd>
-        Todo el contenido que se usa en el cuerpo del documento o aplicación,
-        por cuerpo se refiere a todo lo que queda entre la etiqueta body.
-      </dd>
-      <dt>
-        Seccionado:
-      </dt>
-      <dd>
-        Contenido que define el ámbito de los encabezados y los pies, toda
-        sección tiene potencialmente un encabezado y un esquema.
-      </dd>
-      <dt>
-        Encabezados:
-      </dt>
-      <dd>
-        Define el encabezado de una sección.
-      </dd>
-      <dt>
-        Redacción:
-      </dt>
-      <dd>
-        Texto del documento y los elementos que lo marcan dentro del párrafo.
-      </dd>
-      <dt>
-        Incorporado:
-      </dt>
-      <dd>
-        Contenido que se importa otro recurso de un vocabulario distinto.
-      </dd>
-      <dt>
-        Interactivo:
-      </dt>
-      <dd>
-        Contenido destinado a interactuar con el usuario.
-      </dd>
-      <dt>
-        Tangible:
-      </dt>
-      <dd>
-        Elementos cuyo modelo de contenido acepte flujo o redacción, que debería
-        tener al menos un nodo y no esté oculto por el atributo "hidden".
-      </dd>
-      <dt>
-        Soporte para scripts:
-      </dt>
-      <dd>
-        No representan nada por sí mismos y son usados para contener scripts.
-      </dd>
-    </dl>
-    <ul>
-      <li>
-        <a
-          href="https://www.w3.org/TR/html5/dom.html#kinds-of-content"
-          target="_blank"
-          >https://www.w3.org/TR/html5/dom.html#kinds-of-content</a
-        >
-      </li>
-      <li>
-        <a href="https://validator.w3.org/" target="_blank"
-          >https://validator.w3.org/</a
-        >
-      </li>
-    </ul>
-    <h2>
-      HTML5 Outliner
-    </h2>
-    <p>
-      Algoritmo por el cual los elementos de secciones definen un nuevo esquema,
-      que potencialmente puede tener su propio header, footer y jerarquía de
-      encabezados (h1 - h6). A día de hoy no se conoce ninguna implementación en
-      ningún navegador gráfico o tecnología asistencial
-    </p>
-    <ul>
-      <li>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"
-          target="_blank"
-          >https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines</a
-        >
-      </li>
-      <li>
-        <a href="https://gsnedders.html5.org/outliner/" target="_blank"
-          >https://gsnedders.html5.org/outliner/</a
-        >
-      </li>
-    </ul>
-    <h2>
-      WAI-ARIA - Web Accessibilty Initiative for Accessible Rich Internet
-      Applications
-    </h2>
-    <ol>
-      <li>
-        Si puedes usar un elemento nativo HTML con la semántica y el
-        comportamiento que necesitas ya implementado, en vez de recondicionar
-        otro elemento añadiendo ARIA role, estado o propiedad, hazlo.
-      </li>
-      <li>No cambies la semántica nativa</li>
-      <li>
-        Todos los controles interactivos ARIA deben ser usables a través del
-        teclado
-      </li>
-      <li>
-        No uses <code>aria-hidden="true"</code> o
-        <code>role="presentation"</code> en un elemento enfocable o en un padre
-        o ancestro, si usas las propiedades <code>display:none</code> o
-        <code>visibility:hidden</code> no será enfocable
-      </li>
-      <li>
-        Todos los elementos interactivos tienen que tener un nombre accesible
-      </li>
-    </ol>
-    <p>No usar ARIA es mejor que usarlo mal</p>
-    <ul>
-      <li>
-        <a href="https://www.w3.org/TR/2018/WD-using-aria-20180927/"
-          >https://www.w3.org/TR/2018/WD-using-aria-20180927/</a
-        >
-      </li>
-      <li>
-        <a href="https://www.w3.org/TR/wai-aria-practices-1.1/"
-          >https://www.w3.org/TR/wai-aria-practices-1.1/</a
-        >
-      </li>
-      <li>
-        <a href="https://www.w3.org/WAI/tutorials"
-          >https://www.w3.org/WAI/tutorials</a
-        >
-      </li>
-    </ul>
+      <dl>
+        <dt>
+          Documento
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;html&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Metadatos
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;head&gt;</li>
+            <li>&lt;title&gt;</li>
+            <li>&lt;base&gt;</li>
+            <li>&lt;link&gt;</li>
+            <li>&lt;meta&gt;</li>
+            <li>&lt;style&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Secciones
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;body&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;article&gt;</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;h1&gt;</li>
+            <li>&lt;h2&gt;</li>
+            <li>&lt;h3&gt;</li>
+            <li>&lt;h4&gt;</li>
+            <li>&lt;h5&gt;</li>
+            <li>&lt;h6&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Agrupadores de contenido
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;p&gt;</li>
+            <li>&lt;address&gt;</li>
+            <li>&lt;hr&gt;</li>
+            <li>&lt;pre&gt;</li>
+            <li>&lt;blockquote&gt;</li>
+            <li>&lt;ol&gt;</li>
+            <li>&lt;ul&gt;</li>
+            <li>&lt;li&gt;</li>
+            <li>&lt;dl&gt;</li>
+            <li>&lt;dt&gt;</li>
+            <li>&lt;dd&gt;</li>
+            <li>&lt;figure&gt;</li>
+            <li>&lt;figcaption&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;div&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Semántica a nivel de texto
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;a&gt;</li>
+            <li>&lt;em&gt;</li>
+            <li>&lt;strong&gt;</li>
+            <li>&lt;small&gt;</li>
+            <li>&lt;s&gt;</li>
+            <li>&lt;cite&gt;</li>
+            <li>&lt;q&gt;</li>
+            <li>&lt;dfn&gt;</li>
+            <li>&lt;abbr&gt;</li>
+            <li>&lt;ruby&gt;</li>
+            <li>&lt;rb&gt;</li>
+            <li>&lt;rt&gt;</li>
+            <li>&lt;rtc&gt;</li>
+            <li>&lt;rp&gt;</li>
+            <li>&lt;data&gt;</li>
+            <li>&lt;time&gt;</li>
+            <li>&lt;li&gt;</li>
+            <li>&lt;var&gt;</li>
+            <li>&lt;samp&gt;</li>
+            <li>&lt;kbd&gt;</li>
+            <li>&lt;sub&gt;</li>
+            <li>&lt;sup&gt;</li>
+            <li>&lt;i&gt;</li>
+            <li>&lt;b&gt;</li>
+            <li>&lt;u&gt;</li>
+            <li>&lt;mark&gt;</li>
+            <li>&lt;bdi&gt;</li>
+            <li>&lt;bdo&gt;</li>
+            <li>&lt;span&gt;</li>
+            <li>&lt;br&gt;</li>
+            <li>&lt;wbr&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Edición
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;ins&gt;</li>
+            <li>&lt;del&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Contenido incorporado
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;picture&gt;</li>
+            <li>&lt;source&gt;</li>
+            <li>&lt;img&gt;</li>
+            <li>&lt;iframe&gt;</li>
+            <li>&lt;embed&gt;</li>
+            <li>&lt;object&gt;</li>
+            <li>&lt;param&gt;</li>
+            <li>&lt;video&gt;</li>
+            <li>&lt;audio&gt;</li>
+            <li>&lt;track&gt;</li>
+            <li>&lt;map&gt;</li>
+            <li>&lt;area&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Enlaces
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;a&gt;</li>
+            <li>&lt;area&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Datos tabulares
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;table&gt;</li>
+            <li>&lt;caption&gt;</li>
+            <li>&lt;colgroup&gt;</li>
+            <li>&lt;col&gt;</li>
+            <li>&lt;tbody&gt;</li>
+            <li>&lt;thead&gt;</li>
+            <li>&lt;tfoot&gt;</li>
+            <li>&lt;tr&gt;</li>
+            <li>&lt;td&gt;</li>
+            <li>&lt;th&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Formularios
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;form&gt;</li>
+            <li>&lt;label&gt;</li>
+            <li>&lt;input&gt;</li>
+            <li>&lt;button&gt;</li>
+            <li>&lt;select&gt;</li>
+            <li>&lt;datalist&gt;</li>
+            <li>&lt;optgroup&gt;</li>
+            <li>&lt;option&gt;</li>
+            <li>&lt;textarea&gt;</li>
+            <li>&lt;output&gt;</li>
+            <li>&lt;progress&gt;</li>
+            <li>&lt;meter&gt;</li>
+            <li>&lt;fieldset&gt;</li>
+            <li>&lt;legend&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Elementos interactivos
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;details&gt;</li>
+            <li>&lt;summary&gt;</li>
+            <li>&lt;dialog&gt;</li>
+          </ul>
+        </dd>
+        <dt>
+          Scripting
+        </dt>
+        <dd>
+          <ul class="code-block">
+            <li>&lt;script&gt;</li>
+            <li>&lt;noscript&gt;</li>
+            <li>&lt;template&gt;</li>
+            <li>&lt;canvas&gt;</li>
+          </ul>
+        </dd>
+      </dl>
+      <ul>
+        <li>
+          <a
+            href="https://www.w3.org/TR/html5/semantics.html#semantics"
+            target="_blank"
+            >https://www.w3.org/TR/html5/semantics.html#semantics</a
+          >
+        </li>
+      </ul>
+      <h3>
+        Modelos de contenido
+      </h3>
+      <p>
+        Cada elemento HTML tiene un modelo de contenido "Content Model", que es
+        el tipo de contenido que la etiqueta admite.
+      </p>
+      <dl>
+        <dt>
+          Metadatos:
+        </dt>
+        <dd>
+          Contenido que prepara la presentación o comportamiento del resto de
+          contenido y la relación con otros documentos.
+        </dd>
+        <dt>
+          Flujo:
+        </dt>
+        <dd>
+          Todo el contenido que se usa en el cuerpo del documento o aplicación,
+          por cuerpo se refiere a todo lo que queda entre la etiqueta body.
+        </dd>
+        <dt>
+          Seccionado:
+        </dt>
+        <dd>
+          Contenido que define el ámbito de los encabezados y los pies, toda
+          sección tiene potencialmente un encabezado y un esquema.
+        </dd>
+        <dt>
+          Encabezados:
+        </dt>
+        <dd>
+          Define el encabezado de una sección.
+        </dd>
+        <dt>
+          Redacción:
+        </dt>
+        <dd>
+          Texto del documento y los elementos que lo marcan dentro del párrafo.
+        </dd>
+        <dt>
+          Incorporado:
+        </dt>
+        <dd>
+          Contenido que se importa otro recurso de un vocabulario distinto.
+        </dd>
+        <dt>
+          Interactivo:
+        </dt>
+        <dd>
+          Contenido destinado a interactuar con el usuario.
+        </dd>
+        <dt>
+          Tangible:
+        </dt>
+        <dd>
+          Elementos cuyo modelo de contenido acepte flujo o redacción, que
+          debería tener al menos un nodo y no esté oculto por el atributo
+          "hidden".
+        </dd>
+        <dt>
+          Soporte para scripts:
+        </dt>
+        <dd>
+          No representan nada por sí mismos y son usados para contener scripts.
+        </dd>
+      </dl>
+      <ul>
+        <li>
+          <a
+            href="https://www.w3.org/TR/html5/dom.html#kinds-of-content"
+            target="_blank"
+            >https://www.w3.org/TR/html5/dom.html#kinds-of-content</a
+          >
+        </li>
+        <li>
+          <a href="https://validator.w3.org/" target="_blank"
+            >https://validator.w3.org/</a
+          >
+        </li>
+      </ul>
+      <h2>
+        HTML5 Outliner
+      </h2>
+      <p>
+        Algoritmo por el cual los elementos de secciones definen un nuevo
+        esquema, que potencialmente puede tener su propio header, footer y
+        jerarquía de encabezados (h1 - h6). A día de hoy no se conoce ninguna
+        implementación en ningún navegador gráfico o tecnología asistencial
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"
+            target="_blank"
+            >https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines</a
+          >
+        </li>
+        <li>
+          <a href="https://gsnedders.html5.org/outliner/" target="_blank"
+            >https://gsnedders.html5.org/outliner/</a
+          >
+        </li>
+      </ul>
+      <h2>
+        WAI-ARIA - Web Accessibilty Initiative for Accessible Rich Internet
+        Applications
+      </h2>
+      <ol>
+        <li>
+          Si puedes usar un elemento nativo HTML con la semántica y el
+          comportamiento que necesitas ya implementado, en vez de recondicionar
+          otro elemento añadiendo ARIA role, estado o propiedad, hazlo.
+        </li>
+        <li>No cambies la semántica nativa</li>
+        <li>
+          Todos los controles interactivos ARIA deben ser usables a través del
+          teclado
+        </li>
+        <li>
+          No uses <code>aria-hidden="true"</code> o
+          <code>role="presentation"</code> en un elemento enfocable o en un
+          padre o ancestro, si usas las propiedades <code>display:none</code> o
+          <code>visibility:hidden</code> no será enfocable
+        </li>
+        <li>
+          Todos los elementos interactivos tienen que tener un nombre accesible
+        </li>
+      </ol>
+      <p>No usar ARIA es mejor que usarlo mal</p>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/2018/WD-using-aria-20180927/"
+            >https://www.w3.org/TR/2018/WD-using-aria-20180927/</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/TR/wai-aria-practices-1.1/"
+            >https://www.w3.org/TR/wai-aria-practices-1.1/</a
+          >
+        </li>
+        <li>
+          <a href="https://www.w3.org/WAI/tutorials"
+            >https://www.w3.org/WAI/tutorials</a
+          >
+        </li>
+      </ul>
+    </main>
     <footer>
       <nav class="main-nav">
-        <ul>
-          <li class="nav-item"><a href="index.html">Index</a></li>
-          <li class="nav-item"><a href="02_CSS.html">02 CSS</a></li>
-          <li class="nav-item"><a href="03_SASS.html">03 SASS</a></li>
-          <li class="nav-item"><a href="04_OOCSS.html">04 OOCSS</a></li>
-          <li class="nav-item"><a href="05_Fonts.html">05 Fonts</a></li>
-          <li class="nav-item"><a href="06_RWD.html">06 RWD</a></li>
-          <li class="nav-item"><a href="07_Flexbox.html">07 Flexbox</a></li>
-          <li class="nav-item"><a href="08_Grid.html">08 Grid</a></li>
-          <li class="nav-item">
-            <a href="09_WebComponents.html">09 Web Components</a>
-          </li>
-          <li class="nav-item">
-            <a href="10_Animaciones.html">10 Animaciones</a>
-          </li>
-        </ul>
+        <fed-nav-panel>
+          <ul>
+            <li class="nav-item"><a href="index.html">Index</a></li>
+            <li class="nav-item"><a href="01_HTML.html">01 HTML</a></li>
+            <li class="nav-item"><a href="02_CSS.html">02 CSS</a></li>
+            <li class="nav-item"><a href="03_SASS.html">03 SASS</a></li>
+            <li class="nav-item"><a href="04_OOCSS.html">04 OOCSS</a></li>
+            <li class="nav-item"><a href="05_RWD.html">05 RWD</a></li>
+            <li class="nav-item"><a href="06_Flexbox.html">06 Flexbox</a></li>
+            <li class="nav-item"><a href="07_Grid.html">07 Grid</a></li>
+            <li class="nav-item">
+              <a href="08_WebComponents.html">08 Web Components</a>
+            </li>
+            <li class="nav-item">
+              <a href="09_Animaciones.html">09 Animaciones</a>
+            </li>
+          </ul>
+        </fed-nav-panel>
       </nav>
     </footer>
     <script src="_/js/prism.js"></script>
