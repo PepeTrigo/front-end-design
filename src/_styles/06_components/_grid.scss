@@ -1,0 +1,49 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: 6rem 1fr 3rem;
+  grid-template-columns: 6rem 1fr;
+  grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+  min-height: 40vh;
+}
+
+.grid-header {
+  grid-area: header;
+  background-color: #000;
+}
+
+.grid-nav {
+  grid-area: nav;
+  background-color: #333;
+}
+
+.grid-content {
+  background-color: #999;
+  grid-area: content;
+  grid-row: 2/3;
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.grid-footer {
+  background-color: #666;
+  grid-area: footer;
+}
+
+.grid-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: #eee;
+  border-radius: 3px;
+  text-align: center;
+  height: 6rem;
+  width: 5rem;
+}
