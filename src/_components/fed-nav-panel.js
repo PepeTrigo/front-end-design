@@ -23,6 +23,10 @@ class FedNavPanel extends HTMLElement {
                     /* background-color: red; */
                 }
 
+                ::slotted(.panel-content) {
+                  padding-right: 2rem;
+                }
+
                 ${btnReset}
 
                 .panel__toggle {
