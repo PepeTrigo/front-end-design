@@ -48,6 +48,15 @@
             </div>
           </figure>
         </dd>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements"
+            >
+              https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
+            </a>
+          </li>
+        </ul>
         <dt>Elementos de línea</dt>
         <dd>Ocupan el 100% del ancho y alto de su contenido</dd>
         <dd>
@@ -67,6 +76,15 @@
           </figure>
         </dd>
       </dl>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements"
+          >
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
+          </a>
+        </li>
+      </ul>
 
       <h2>Modelo de caja</h2>
       <p>
@@ -172,6 +190,53 @@
       </ul>
       <h2>Cascada / Herencia / Especificidad</h2>
       <img class="responsive-image" src="/images/!important.jpeg" alt="" />
+      <dl>
+        <dt>Cascada</dt>
+        <dd>
+          Es el algoritmo que como se combinan los valores de las propiedades
+          originados desde distintos recursos
+        </dd>
+        <dt>Herencia</dt>
+        <dd>
+          Controla lo que sucede a un elemento cuando no se especifica el valor
+          de una determinada propiedad, existen propiedades cuya definición es
+          heredada por defecto, como por ejemplo <i>font-size</i>.
+        </dd>
+        <dt>Especificidad</dt>
+        <dd>
+          Es el mecanismo por el cual, en función de la combinación de de
+          selectores, el navegador decide que propiedades aplica al elemento
+        </dd>
+        <dd>
+          <pre>
+              <code class="language-scss">
+                  element {
+                      // specificity value: 0 0 1
+                  }
+
+                  .class {
+                    // specificity value: 0 1 0
+                  }
+
+                  #id {
+                    // specificity value: 1 0 0
+                  }
+
+                  .class .class {
+                    // specificity value: 0 2 0
+                  }
+
+                  element .class #id {
+                    // specificity value: 1 1 1
+                  }
+
+                  element !important {
+                    // specificity value: 1 0 0 0 1
+                  }
+              </code>
+          </pre>
+        </dd>
+      </dl>
       <ul>
         <li>
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity"

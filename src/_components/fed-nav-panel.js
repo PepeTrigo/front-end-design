@@ -90,6 +90,7 @@ class FedNavPanel extends HTMLElement {
 
                 .panel__nav {
                     background-color: #fff;
+                    box-shadow: 0px 0px 15px rgba(0,0,0,0.25);
                     height: 100%;
                     padding-top: 8rem;
                     transform: translateX(-100%);
